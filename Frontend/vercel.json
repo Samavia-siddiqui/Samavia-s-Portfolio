@@ -1,4 +1,0 @@
-{
-  "buildCommand": "npm install --include=dev && npx vite build",
-  "outputDirectory": "dist"
-}
