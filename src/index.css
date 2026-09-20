@@ -179,7 +179,7 @@ body {
   background-color: #fff8f2;
   color: #1e1b16;
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Custom scrollbar matching editorial aesthetic */

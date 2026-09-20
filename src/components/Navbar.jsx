@@ -27,10 +27,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 ${
         isScrolled
-          ? 'bg-surface/90 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.06)]'
-          : 'bg-surface/80 backdrop-blur-sm'
+          ? 'bg-surface/95 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.08)] border-b border-outline-variant/30'
+          : 'bg-surface/90 backdrop-blur-sm border-b border-outline-variant/20'
       }`}
     >
       <div className="max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop h-20 flex items-center justify-between">
