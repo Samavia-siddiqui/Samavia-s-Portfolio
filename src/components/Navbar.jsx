@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import avatarImg from '../assets/avatar.jpg';
 
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
   { name: 'Work', href: '#work' },
-  { name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -58,24 +56,14 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right CTA & Profile & Mobile Toggle */}
+        {/* Right CTA & Mobile Toggle */}
         <div className="flex items-center gap-3 sm:gap-4">
           <a
             href="#contact"
-            className="hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary-fixed font-label-lg text-label-lg rounded-full px-5 py-2.5 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+            className="hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary-fixed font-label-lg text-label-lg rounded-xl px-5 py-2.5 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 font-bold"
           >
             Let's Talk
           </a>
-
-          {/* Mini Avatar in Header */}
-          <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-primary-container/60 bg-surface-container-high shrink-0">
-            <img
-              src={avatarImg}
-              alt="Samavia Siddiqui"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: '50% 15%' }}
-            />
-          </div>
 
           {/* Mobile Hamburger Button */}
           <button
@@ -83,7 +71,7 @@ export default function Navbar() {
             onClick={toggleMenu}
             aria-label="Toggle Navigation Menu"
             aria-expanded={isOpen}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-on-surface hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary-container"
+            className="md:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary-container"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -106,7 +94,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={closeMenu}
-            className="inline-flex items-center justify-center bg-primary-container text-on-primary-fixed font-label-lg text-label-lg rounded-full px-5 py-2.5 text-center mt-2 shadow-sm active:scale-[0.98] transition-all"
+            className="inline-flex items-center justify-center bg-primary-container text-on-primary-fixed font-label-lg text-label-lg rounded-xl px-5 py-2.5 text-center mt-2 shadow-sm active:scale-[0.98] transition-all font-bold"
           >
             Let's Talk
           </a>

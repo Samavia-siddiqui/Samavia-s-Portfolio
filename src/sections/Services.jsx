@@ -14,17 +14,17 @@ export default function Services() {
 
   return (
     <section className="relative w-full bg-surface py-20 lg:py-28 overflow-hidden" id="services">
-      {/* Decorative Dot-Grid Pattern Top-Left */}
+      {/* Decorative Dot-Grid Pattern Safely in Bottom-Left Margin */}
       <div
         aria-hidden="true"
-        className="absolute top-8 left-6 w-60 h-48 pointer-events-none opacity-20 z-0 hidden lg:block"
+        className="absolute bottom-10 left-4 w-48 h-40 pointer-events-none opacity-15 z-0 hidden lg:block"
       >
         <svg
           className="text-primary-container"
           fill="none"
-          height="190"
-          viewBox="0 0 240 190"
-          width="240"
+          height="160"
+          viewBox="0 0 190 160"
+          width="190"
         >
           <pattern
             height="20"
@@ -34,7 +34,7 @@ export default function Services() {
           >
             <circle cx="2.5" cy="2.5" fill="currentColor" r="2" />
           </pattern>
-          <rect fill="url(#dot-grid-services)" height="190" width="240" />
+          <rect fill="url(#dot-grid-services)" height="160" width="190" />
         </svg>
       </div>
 
@@ -43,7 +43,7 @@ export default function Services() {
         aria-hidden="true"
         animate={{ y: [0, -10, 0], rotate: [-25, -23, -25] }}
         transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute -bottom-10 right-8 w-80 h-44 pointer-events-none opacity-25 z-0 hidden md:block"
+        className="absolute -bottom-10 right-8 w-80 h-44 pointer-events-none opacity-20 z-0 hidden md:block"
       >
         <svg className="w-full h-full" fill="none" viewBox="0 0 320 180">
           <path
@@ -70,8 +70,8 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12"
         >
-          <div>
-            <span className="font-label-lg text-label-lg tracking-widest text-primary uppercase mb-2 block font-semibold">
+          <div className="relative z-10">
+            <span className="font-label-lg text-label-lg tracking-wide text-primary uppercase mb-2 block font-semibold">
               Capabilities
             </span>
             <h2 className="font-headline-lg text-headline-md md:text-headline-lg font-bold text-on-surface tracking-tight">
@@ -167,10 +167,10 @@ export default function Services() {
                   <div className="pt-6 mt-auto border-t border-outline-variant/20">
                     <a
                       href="#contact"
-                      className="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:text-on-surface transition-colors font-semibold group"
+                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all"
                     >
                       <span>Inquire for Outreach Openings</span>
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
                 </motion.div>
@@ -287,10 +287,10 @@ export default function Services() {
                   <div className="pt-6 mt-auto border-t border-outline-variant/20">
                     <a
                       href="#contact"
-                      className="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:text-on-surface transition-colors font-semibold group"
+                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all"
                     >
-                      <span>Discuss Your System Architecture</span>
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      <span>Discuss System Architecture</span>
+                      <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
                 </motion.div>

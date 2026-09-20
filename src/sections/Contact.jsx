@@ -343,7 +343,7 @@ export default function Contact() {
                 href="https://wa.me/923130080742"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-3 bg-[#25D366] text-white font-label-lg text-label-lg py-3.5 px-6 rounded-xl shadow-xs hover:shadow-md hover:bg-[#20ba5a] transition-all font-bold"
+                className="w-full inline-flex items-center justify-center gap-3 bg-[#075E54] text-white font-label-lg text-label-lg py-3.5 px-6 rounded-xl shadow-xs hover:shadow-md hover:bg-[#054c44] transition-all font-bold"
               >
                 <WhatsAppIcon className="w-5 h-5 shrink-0" />
                 <span>+92 313 0080742</span>

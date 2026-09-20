@@ -56,7 +56,10 @@ export default function About() {
           {/* Left: Decorative Typography & Precision Card (5 cols) */}
           <div className="lg:col-span-5 relative select-none">
             <div className="relative p-8 md:p-10 rounded-2xl bg-surface shadow-sm border border-outline-variant/30">
-              <span className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-on-surface/10 leading-none block uppercase tracking-tighter mb-4">
+              <span
+                aria-hidden="true"
+                className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-on-surface/10 leading-none block uppercase tracking-tighter mb-4"
+              >
                 MERN Stack
                 <br />
                 + SEO Growth
@@ -78,7 +81,7 @@ export default function About() {
               {/* Angular Decorative Accent */}
               <div className="mt-6 flex items-center gap-3">
                 <div className="w-12 h-0.5 bg-primary-container"></div>
-                <span className="font-label-sm text-label-sm tracking-widest text-primary uppercase font-bold">
+                <span className="font-label-sm text-label-sm tracking-wide text-primary font-bold">
                   Code • Authority • Impact
                 </span>
               </div>
@@ -87,7 +90,7 @@ export default function About() {
 
           {/* Right: Focused Editorial Bio (7 cols) */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            <span className="font-label-lg text-label-lg tracking-widest text-primary uppercase mb-3 font-semibold">
+            <span className="font-label-lg text-label-lg tracking-wide text-primary mb-3 font-semibold">
               About Samavia Siddiqui
             </span>
             <h2 className="font-headline-lg text-headline-md md:text-headline-lg text-on-surface font-bold tracking-tight mb-6">

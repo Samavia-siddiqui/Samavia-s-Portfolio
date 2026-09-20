@@ -163,38 +163,68 @@ export default function Portfolio() {
           className="bg-surface rounded-2xl p-8 lg:p-12 shadow-sm hover:shadow-[0_12px_32px_-8px_rgba(43,36,32,0.08)] transition-all duration-300 mb-14 border border-outline-variant/30 hover:border-primary-container/70"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Visual Interactive Display (5 cols) */}
-            <div className="lg:col-span-5 bg-surface-container-lowest rounded-xl p-6 shadow-inner flex flex-col justify-between min-h-[280px] border border-outline-variant/20">
-              <div className="flex items-center justify-between pb-4 border-b border-outline-variant/15">
+            {/* Visual Interactive CRM Project Mockup (5 cols) */}
+            <div className="lg:col-span-5 bg-gradient-to-br from-surface-container to-surface-container-low rounded-2xl p-5 sm:p-6 shadow-md border border-outline-variant/30 flex flex-col gap-3.5 overflow-hidden group">
+              {/* Window Header */}
+              <div className="flex items-center justify-between pb-3 border-b border-outline-variant/20">
                 <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-primary-container"></span>
-                  <span className="w-3 h-3 rounded-full bg-surface-container"></span>
-                  <span className="w-3 h-3 rounded-full bg-surface-container-high"></span>
+                  <span className="w-3 h-3 rounded-full bg-[#ff5f56]/85"></span>
+                  <span className="w-3 h-3 rounded-full bg-[#ffbd2e]/85"></span>
+                  <span className="w-3 h-3 rounded-full bg-[#27c93f]/85"></span>
                 </div>
-                <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">
-                  Hackathon Finalist
-                </span>
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-surface border border-outline-variant/20 text-[11px] font-mono text-primary font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                  api/tickets/live
+                </div>
               </div>
 
-              <div className="py-6">
-                <span className="font-display text-2xl md:text-3xl font-bold text-on-surface block mb-2">
-                  Orbit Support Flow
-                </span>
-                <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Full-scale ticketing CRM and user issue resolver designed with automated status
-                  triggers and client analytics.
-                </p>
+              {/* Simulated CRM Interface Cards */}
+              <div className="space-y-2.5">
+                {/* Simulated Ticket Row 1 */}
+                <div className="p-3 bg-surface rounded-xl border border-outline-variant/25 shadow-xs flex items-center justify-between gap-3 transition-transform duration-200 group-hover:translate-x-1">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <span className="w-2 h-2 rounded-full bg-[#27c93f] shrink-0"></span>
+                    <div className="truncate">
+                      <p className="text-xs font-semibold text-on-surface truncate">#1082 · Auth Handshake Resolved</p>
+                      <p className="text-[11px] text-on-surface-variant">MongoDB Cluster · 1.2m triage</p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-surface-container-high text-primary shrink-0">Resolved</span>
+                </div>
+
+                {/* Simulated Ticket Row 2 */}
+                <div className="p-3 bg-surface rounded-xl border border-outline-variant/25 shadow-xs flex items-center justify-between gap-3 transition-transform duration-200 group-hover:translate-x-1 delay-75">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <span className="w-2 h-2 rounded-full bg-primary-container shrink-0"></span>
+                    <div className="truncate">
+                      <p className="text-xs font-semibold text-on-surface truncate">#1083 · Webhook Queue Active</p>
+                      <p className="text-[11px] text-on-surface-variant">Express Microservice · Live</p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-primary-container/25 text-on-surface shrink-0">Active</span>
+                </div>
               </div>
 
-              <div className="pt-4 flex items-center justify-between border-t border-outline-variant/15">
-                <span className="text-xs font-mono text-primary font-bold">MERN Architecture</span>
-                <Database className="w-5 h-5 text-primary-container" />
+              {/* CRM Key Metrics Footer Bar */}
+              <div className="pt-2 grid grid-cols-3 gap-2 border-t border-outline-variant/20 text-center">
+                <div className="p-2 bg-surface rounded-lg border border-outline-variant/20">
+                  <span className="block text-[10px] uppercase font-bold text-on-surface-variant">Resolution</span>
+                  <span className="text-xs font-bold text-primary">98.4%</span>
+                </div>
+                <div className="p-2 bg-surface rounded-lg border border-outline-variant/20">
+                  <span className="block text-[10px] uppercase font-bold text-on-surface-variant">Latency</span>
+                  <span className="text-xs font-bold text-on-surface">&lt;45ms</span>
+                </div>
+                <div className="p-2 bg-surface rounded-lg border border-outline-variant/20">
+                  <span className="block text-[10px] uppercase font-bold text-on-surface-variant">Stack</span>
+                  <span className="text-xs font-bold text-primary">MERN</span>
+                </div>
               </div>
             </div>
 
             {/* Project Information & Actions (7 cols) */}
             <div className="lg:col-span-7 flex flex-col items-start">
-              <div className="inline-block px-3.5 py-1 rounded-full bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase mb-4 tracking-wider">
+              <div className="inline-block px-3.5 py-1 rounded-xl bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-bold tracking-wide mb-4">
                 Full Stack — MERN
               </div>
               <h3 className="font-headline-md text-headline-md font-bold text-on-surface mb-3">
@@ -211,7 +241,7 @@ export default function Portfolio() {
                 {['React.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-md bg-surface-container text-xs font-medium text-on-surface border border-outline-variant/20"
+                    className="px-3 py-1 rounded-lg bg-surface-container text-xs font-medium text-on-surface border border-outline-variant/20"
                   >
                     {tech}
                   </span>
@@ -226,7 +256,7 @@ export default function Portfolio() {
                   href="https://orbit-support-flow-final-hackathon.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-primary-container text-on-primary-fixed font-label-lg text-label-lg px-6 py-3 rounded-xl shadow-xs hover:shadow-md transition-all duration-200"
+                  className="inline-flex items-center gap-2 bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold px-6 py-3 rounded-xl shadow-xs hover:shadow-md transition-all duration-200"
                 >
                   <span>Live Demo</span>
                   <ExternalLink className="w-4 h-4" />
@@ -237,7 +267,7 @@ export default function Portfolio() {
                   href="https://github.com/Samavia-siddiqui/Orbit-Support-Flow-Final-Hackathon-Project"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-surface-container text-on-surface font-label-lg text-label-lg px-5 py-3 rounded-xl hover:bg-surface-container-low transition-all duration-200 border border-outline-variant/30"
+                  className="inline-flex items-center gap-2 bg-surface-container text-on-surface font-label-lg text-label-lg font-bold px-5 py-3 rounded-xl hover:bg-surface-container-low transition-all duration-200 border border-outline-variant/30"
                 >
                   <span>GitHub Repo</span>
                   <GithubIcon className="w-4 h-4" />
@@ -263,7 +293,7 @@ export default function Portfolio() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">
+                    <span className="font-label-sm text-label-sm text-primary font-bold tracking-wide">
                       {proj.category}
                     </span>
                     <IconComponent className="w-5 h-5 text-outline" />
@@ -278,7 +308,7 @@ export default function Portfolio() {
                     {proj.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs px-2.5 py-0.5 rounded bg-surface-container text-on-surface border border-outline-variant/15 font-medium"
+                        className="text-xs px-2.5 py-1 rounded-lg bg-surface-container text-on-surface border border-outline-variant/15 font-medium"
                       >
                         {tag}
                       </span>
@@ -286,23 +316,23 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-outline-variant/15">
+                <div className="flex items-center justify-between pt-4 border-t border-outline-variant/15 gap-2">
                   <a
                     href={proj.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center gap-1.5 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container/20 hover:bg-primary-container/35 text-on-surface font-semibold text-xs transition-all border border-primary-container/30"
                   >
                     <span>Live Demo</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
+                    <ExternalLink className="w-3.5 h-3.5 text-primary" />
                   </a>
                   <a
                     href={proj.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-on-surface-variant hover:text-on-surface text-xs font-mono flex items-center gap-1 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-xs transition-all border border-outline-variant/30"
                   >
-                    <GithubIcon className="w-3.5 h-3.5" />
+                    <GithubIcon className="w-3.5 h-3.5 text-on-surface" />
                     <span>GitHub</span>
                   </a>
                 </div>
@@ -319,7 +349,7 @@ export default function Portfolio() {
             transition={{ duration: 0.2 }}
             className="bg-surface-container rounded-2xl p-6 shadow-xs flex flex-col justify-center items-center text-center border border-outline-variant/20 hover:border-primary-container/40 transition-all duration-300"
           >
-            <div className="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center text-primary mb-4">
+            <div className="w-12 h-12 rounded-xl bg-primary-container/30 flex items-center justify-center text-primary mb-4">
               <Code2 className="w-6 h-6" />
             </div>
             <h4 className="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">
@@ -335,7 +365,7 @@ export default function Portfolio() {
               href="https://github.com/Samavia-siddiqui"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-surface px-5 py-2.5 rounded-xl text-on-surface font-label-lg text-label-lg shadow-xs hover:shadow-md hover:bg-surface-container-lowest transition-all border border-outline-variant/30"
+              className="inline-flex items-center gap-2 bg-surface px-5 py-2.5 rounded-xl text-on-surface font-label-lg text-label-lg font-bold shadow-xs hover:shadow-md hover:bg-surface-container-lowest transition-all border border-outline-variant/30"
             >
               <span>Visit @Samavia-siddiqui</span>
               <ExternalLink className="w-4 h-4" />
@@ -353,7 +383,7 @@ export default function Portfolio() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2.5 mb-3">
               <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
+              <span className="font-label-sm text-label-sm tracking-wide text-primary font-bold">
                 GBOB Outreach Operations
               </span>
             </div>
@@ -370,7 +400,7 @@ export default function Portfolio() {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             href="#contact"
-            className="inline-flex items-center gap-2 bg-surface-container-high px-6 py-3 rounded-xl font-label-lg text-label-lg text-on-surface hover:bg-surface-container transition-colors shrink-0 border border-outline-variant/30 font-semibold"
+            className="inline-flex items-center gap-2 bg-primary-container text-on-primary-fixed px-6 py-3 rounded-xl font-label-lg text-label-lg shadow-sm hover:shadow-md transition-all shrink-0 font-bold"
           >
             <span>Inquire for Outreach</span>
             <ArrowRight className="w-4 h-4" />

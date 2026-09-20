@@ -40,7 +40,7 @@ export default function Hero() {
         aria-hidden="true"
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute -bottom-10 left-1/3 w-96 h-48 pointer-events-none opacity-20 z-0 hidden lg:block"
+        className="absolute bottom-2 left-8 w-80 h-40 pointer-events-none opacity-15 z-0 hidden lg:block"
       >
         <svg className="w-full h-full" fill="none" viewBox="0 0 380 180">
           <path
@@ -92,7 +92,7 @@ export default function Hero() {
                 className="absolute -bottom-3 right-4 sm:right-8 bg-surface-container-lowest px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2.5 border border-outline-variant/30 select-none"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-                <span className="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">
+                <span className="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">
                   Available for Projects
                 </span>
               </motion.div>
@@ -107,9 +107,9 @@ export default function Hero() {
             className="w-full lg:w-[55%] flex flex-col items-start text-left"
           >
             {/* Eyebrow Tag */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-high mb-6 border border-outline-variant/30 select-none">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-surface-container-high mb-6 border border-outline-variant/30 select-none">
               <span className="w-2 h-2 rounded-full bg-primary-container"></span>
-              <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-semibold">
+              <span className="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wide">
                 SEO Link Building &amp; Full Stack Web Dev
               </span>
             </div>
@@ -126,7 +126,7 @@ export default function Hero() {
             </p>
 
             {/* Location Badge */}
-            <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mb-8 py-1.5 px-3.5 rounded-lg bg-surface-container-low border border-outline-variant/30">
+            <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mb-8 py-2 px-4 rounded-xl bg-surface-container-low border border-outline-variant/30">
               <MapPin className="text-primary w-4 h-4 shrink-0" />
               <span>Karachi, Pakistan</span>
               <span className="text-outline-variant">•</span>
@@ -139,7 +139,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary-fixed font-label-lg text-label-lg px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary-fixed font-label-lg text-label-lg font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
               >
                 <span>Start a Project</span>
                 <ArrowRight className="w-4 h-4" />
@@ -149,7 +149,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 href="#work"
-                className="inline-flex items-center justify-center gap-2 bg-surface-container-low text-on-surface font-label-lg text-label-lg px-6 py-3.5 rounded-xl hover:bg-surface-container-high transition-all duration-200 border border-outline-variant/30"
+                className="inline-flex items-center justify-center gap-2 bg-surface-container-low text-on-surface font-label-lg text-label-lg font-bold px-6 py-3.5 rounded-xl hover:bg-surface-container-high transition-all duration-200 border border-outline-variant/30"
               >
                 <span>View My Work</span>
                 <Terminal className="w-4 h-4" />
