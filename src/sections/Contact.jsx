@@ -139,6 +139,29 @@ export default function Contact() {
         </svg>
       </div>
 
+      {/* Angled Floating Chevron Motif Top-Right (Angle: 38°) */}
+      <motion.div
+        aria-hidden="true"
+        animate={{ y: [0, -10, 0], rotate: [38, 41, 38] }}
+        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute top-12 right-10 w-72 h-44 pointer-events-none opacity-20 z-0 hidden md:block"
+      >
+        <svg className="w-full h-full" fill="none" viewBox="0 0 300 160">
+          <path
+            d="M20 130 L150 25 L280 130"
+            stroke="#E3A87C"
+            strokeLinecap="round"
+            strokeWidth="2"
+          />
+          <path
+            d="M45 150 L150 55 L255 150"
+            stroke="#82542f"
+            strokeDasharray="5 5"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </motion.div>
+
       <div className="relative z-10 max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
         {/* Section Heading */}
         <motion.div

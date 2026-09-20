@@ -13,8 +13,55 @@ export default function Services() {
   const [activeTab, setActiveTab] = useState('seo'); // 'seo' | 'web'
 
   return (
-    <section className="relative w-full bg-surface py-20 lg:py-28" id="services">
-      <div className="max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+    <section className="relative w-full bg-surface py-20 lg:py-28 overflow-hidden" id="services">
+      {/* Decorative Dot-Grid Pattern Top-Left */}
+      <div
+        aria-hidden="true"
+        className="absolute top-8 left-6 w-60 h-48 pointer-events-none opacity-20 z-0 hidden lg:block"
+      >
+        <svg
+          className="text-primary-container"
+          fill="none"
+          height="190"
+          viewBox="0 0 240 190"
+          width="240"
+        >
+          <pattern
+            height="20"
+            id="dot-grid-services"
+            patternUnits="userSpaceOnUse"
+            width="20"
+          >
+            <circle cx="2.5" cy="2.5" fill="currentColor" r="2" />
+          </pattern>
+          <rect fill="url(#dot-grid-services)" height="190" width="240" />
+        </svg>
+      </div>
+
+      {/* Angled Chevron Lines Accent Bottom-Right (Angle: -25°) */}
+      <motion.div
+        aria-hidden="true"
+        animate={{ y: [0, -10, 0], rotate: [-25, -23, -25] }}
+        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute -bottom-10 right-8 w-80 h-44 pointer-events-none opacity-25 z-0 hidden md:block"
+      >
+        <svg className="w-full h-full" fill="none" viewBox="0 0 320 180">
+          <path
+            d="M20 140 L160 30 L300 140"
+            stroke="#E3A87C"
+            strokeLinecap="round"
+            strokeWidth="2"
+          />
+          <path
+            d="M50 160 L160 65 L270 160"
+            stroke="#82542f"
+            strokeDasharray="6 6"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </motion.div>
+
+      <div className="relative z-10 max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
         {/* Section Header with Tab Switcher */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

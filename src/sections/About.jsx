@@ -8,6 +8,30 @@ export default function About() {
       className="relative w-full bg-surface-container-high py-20 lg:py-28 overflow-hidden"
       id="about"
     >
+      {/* Decorative Dot-Grid Texture Bottom-Left */}
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-10 -left-10 w-56 h-56 pointer-events-none opacity-20 z-0 hidden sm:block"
+      >
+        <svg
+          className="text-primary-container"
+          fill="none"
+          height="220"
+          viewBox="0 0 220 220"
+          width="220"
+        >
+          <pattern
+            height="20"
+            id="dot-grid-about"
+            patternUnits="userSpaceOnUse"
+            width="20"
+          >
+            <circle cx="2.5" cy="2.5" fill="currentColor" r="2.5" />
+          </pattern>
+          <rect fill="url(#dot-grid-about)" height="220" width="220" />
+        </svg>
+      </div>
+
       {/* Subtle Layered Chevron Lines Motif with slow drift */}
       <motion.div
         aria-hidden="true"

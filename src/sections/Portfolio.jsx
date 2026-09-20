@@ -86,10 +86,57 @@ const projects = [
 export default function Portfolio() {
   return (
     <section
-      className="relative w-full bg-surface-container-high py-20 lg:py-28"
+      className="relative w-full bg-surface-container-high py-20 lg:py-28 overflow-hidden"
       id="work"
     >
-      <div className="max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+      {/* Angled Chevron Lines Accent Mid-Left (Angle: 55°) */}
+      <motion.div
+        aria-hidden="true"
+        animate={{ y: [0, 10, 0], rotate: [55, 58, 55] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute top-1/3 -left-12 w-72 h-44 pointer-events-none opacity-20 z-0 hidden lg:block"
+      >
+        <svg className="w-full h-full" fill="none" viewBox="0 0 300 160">
+          <path
+            d="M20 130 L150 25 L280 130"
+            stroke="#82542f"
+            strokeLinecap="round"
+            strokeWidth="2"
+          />
+          <path
+            d="M45 150 L150 55 L255 150"
+            stroke="#E3A87C"
+            strokeDasharray="5 5"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </motion.div>
+
+      {/* Decorative Dot-Grid Pattern Top-Right */}
+      <div
+        aria-hidden="true"
+        className="absolute top-12 right-10 w-56 h-48 pointer-events-none opacity-20 z-0 hidden md:block"
+      >
+        <svg
+          className="text-primary-container"
+          fill="none"
+          height="190"
+          viewBox="0 0 220 190"
+          width="220"
+        >
+          <pattern
+            height="20"
+            id="dot-grid-portfolio"
+            patternUnits="userSpaceOnUse"
+            width="20"
+          >
+            <circle cx="2.5" cy="2.5" fill="currentColor" r="2.5" />
+          </pattern>
+          <rect fill="url(#dot-grid-portfolio)" height="190" width="220" />
+        </svg>
+      </div>
+
+      <div className="relative z-10 max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
         {/* Section Intro */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

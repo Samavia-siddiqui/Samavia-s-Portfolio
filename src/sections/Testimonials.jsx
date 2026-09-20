@@ -8,7 +8,54 @@ export default function Testimonials() {
       className="relative w-full bg-surface py-20 lg:py-28 overflow-hidden"
       id="testimonials"
     >
-      <div className="max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+      {/* Angled Chevron Lines Accent Bottom-Left (Angle: -55°) */}
+      <motion.div
+        aria-hidden="true"
+        animate={{ y: [0, -8, 0], rotate: [-55, -52, -55] }}
+        transition={{ duration: 8.5, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute -bottom-8 left-8 w-64 h-36 pointer-events-none opacity-20 z-0 hidden md:block"
+      >
+        <svg className="w-full h-full" fill="none" viewBox="0 0 260 150">
+          <path
+            d="M20 120 L130 25 L240 120"
+            stroke="#E3A87C"
+            strokeLinecap="round"
+            strokeWidth="1.8"
+          />
+          <path
+            d="M40 135 L130 50 L220 135"
+            stroke="#82542f"
+            strokeDasharray="4 4"
+            strokeWidth="1.2"
+          />
+        </svg>
+      </motion.div>
+
+      {/* Decorative Dot-Grid Accent Top-Right */}
+      <div
+        aria-hidden="true"
+        className="absolute top-8 right-12 w-48 h-40 pointer-events-none opacity-20 z-0 hidden lg:block"
+      >
+        <svg
+          className="text-primary-container"
+          fill="none"
+          height="160"
+          viewBox="0 0 190 160"
+          width="190"
+        >
+          <pattern
+            height="18"
+            id="dot-grid-testimonials"
+            patternUnits="userSpaceOnUse"
+            width="18"
+          >
+            <circle cx="2.5" cy="2.5" fill="currentColor" r="2" />
+          </pattern>
+          <rect fill="url(#dot-grid-testimonials)" height="160" width="190" />
+        </svg>
+      </div>
+
+      <div className="relative z-10 max-w-[1360px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
